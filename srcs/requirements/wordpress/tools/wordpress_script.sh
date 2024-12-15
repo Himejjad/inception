@@ -22,13 +22,13 @@ chmod +x wp-cli.phar && mv wp-cli.phar /usr/local/bin/wp
 wp core download --allow-root
 
 
-wp core config --dbhost="mariadb" --dbname="$data_name" --dbuser="$data_user" --dbpass="$data_pwd" --path="/var/www/html" --allow-root
+wp core config --dbhost="mariadb" --dbname="$db_name" --dbuser="$db_user" --dbpass="$db_pwd" --path="/var/www/html" --allow-root
 
 
-wp core install --url="$DOMAIN_NAME/" --title="$WP_TITLE" --admin_user="$WP_ADMIN_USR" --admin_password="$WP_ADMIN_PAWRD" --admin_email="$WP_ADMIN_EMAIL" --skip-email --allow-root
+wp core install --url="$DOMAIN_NAME/" --title="$WP_TITLE" --admin_user="$WP_ADMIN_USR" --admin_password="$WP_ADMIN_PASS" --admin_email="$WP_ADMIN_EMAIL" --skip-email --allow-root
 
 
-wp user create "$WP_USR" "$WP_EMAIL" --role=author --user_pass="$WP_PAWRD" --allow-root
+wp user create "$WP_USR" "$WP_EMAIL" --role=author --user_pass="$WP_PASS" --allow-root
 
 
 wp core is-installed --allow-root
