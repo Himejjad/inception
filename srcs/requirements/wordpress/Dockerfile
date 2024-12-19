@@ -13,4 +13,6 @@ COPY ./tools/www.conf /etc/php/7.4/fpm/pool.d/www.conf
 
 RUN  chmod +x /wordpress_script.sh
 
+EXPOSE 9000
+
 CMD ["/wordpress_script.sh"]
